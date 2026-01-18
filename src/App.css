@@ -1,0 +1,259 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+
+body {
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Explore Button Styling */
+.explore-btn {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #9333ea, #db2777);
+  color: white;
+  box-shadow: 0 4px 15px rgba(147, 51, 234, 0.4);
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #9333ea, #db2777);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 3rem;
+  font-weight: bold;
+}
+#BestSupport{
+  background-color: #030312;
+  
+  .BestSupport {  
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+  /* Container for 3D/Perspective Effect */
+  .showcase-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 600px;
+    perspective: 1000px;
+  }
+  
+  /* Individual Card Styling */
+  .card {
+    background-color: #1a1a36;
+    border-radius: 15px;
+    padding: 20px;
+    width: 300px;
+    height: 480px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    cursor: pointer;
+  
+    /* Transition for smooth movement */
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 0.6s ease-out,
+      border 0.6s ease-out,
+      box-shadow 0.6s ease-out;
+  
+    border: 2px solid transparent;
+    overflow: hidden;
+    pointer-events: all;
+  }
+  
+  /* CSS Transform Positions (These apply based on the 'data-pos' set by JS)
+          -2: Far Left (mostly hidden)
+          -1: Left (scaled down)
+          0: Center (active)
+          1: Right (scaled down)
+          2: Far Right (mostly hidden)
+          */
+  .card[data-pos="-2"] {
+    transform: translateX(-650px) rotateY(30deg) scale(0.6);
+    opacity: 0.1;
+    z-index: 5;
+  }
+  
+  .card[data-pos="-1"] {
+    transform: translateX(-350px) rotateY(15deg) scale(0.85);
+    opacity: 0.7;
+    z-index: 10;
+  }
+  
+  .card[data-pos="0"] {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    z-index: 20;
+    border: 2px solid #a855f7;
+    box-shadow: 0 10px 30px rgba(168, 85, 247, 0.4);
+  }
+  
+  .card[data-pos="1"] {
+    transform: translateX(350px) rotateY(-15deg) scale(0.85);
+    opacity: 0.7;
+    z-index: 10;
+  }
+  
+  .card[data-pos="2"] {
+    transform: translateX(650px) rotateY(-30deg) scale(0.6);
+    opacity: 0.1;
+    z-index: 5;
+  }
+  
+  /* Card Content Styling */
+  .card-image {
+    width: 100%;
+    height: 180px;
+    background-color: #0d0d1e;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    color: #888;
+  }
+  
+  /* Placeholder styling for visual context */
+  .card-1 .card-image {
+    background: linear-gradient(to top, #0D0D1E, #5A2D87);
+  }
+  
+  /* Neural Network */
+  .card-2 .card-image {
+    background: linear-gradient(to top, #0D0D1E, #254F7F);
+  }
+  
+  /* Quantum Cloud */
+  .card-3 .card-image {
+    background: linear-gradient(to top, #0D0D1E, #38A169);
+  }
+  
+  /* Blockchain Vault */
+  .card-4 .card-image {
+    background: linear-gradient(to top, #0D0D1E, #C75000);
+  }
+  
+  /* Edge Computing */
+  .card-5 .card-image {
+    background: linear-gradient(to top, #0D0D1E, #6C006C);
+  }
+  
+  /* Metaverse Dev */
+  
+  
+  .card-title {
+    font-size: 1.8em;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin: 10px 0;
+    background: linear-gradient(to right, #ffffff, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  
+  .card-description {
+    font-size: 0.9em;
+    color: #cccccc;
+    min-height: 40px;
+    margin: 15px 0 25px 0;
+  }
+  
+  .card-tags {
+    margin: 15px 0 30px 0;
+    min-height: 30px;
+  }
+  
+  .tag {
+    display: inline-block;
+    background-color: rgba(168, 85, 247, 0.2);
+    color: #a855f7;
+    font-size: 0.7em;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  /* Explore Button Styling */
+  .explore-btn {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #9333ea, #db2777);
+    color: white;
+    box-shadow: 0 4px 15px rgba(147, 51, 234, 0.4);
+  }
+  
+  .card[data-pos="0"] .explore-btn {
+    padding: 12px 40px;
+    font-size: 1.1em;
+    box-shadow: 0 6px 20px rgba(147, 51, 234, 0.6);
+  }
+  
+  .explore-btn:hover {
+    opacity: 0.85;
+  }
+  
+  /* Navigation Arrows */
+  .nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 2em;
+    z-index: 30;
+    user-select: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+  }
+  
+  .nav-arrow:hover {
+    opacity: 1;
+  }
+  
+  #prev {
+    left: 50px;
+  }
+  
+  #next {
+    right: 50px;
+  }
+  }
+}
