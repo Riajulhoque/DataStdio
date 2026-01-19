@@ -17,7 +17,7 @@ const Navber = () => {
       <li><a href='/jobs'>JobsPage</a></li>
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl font-bold text-[#7370FF]" href='/'>Data Stdio</a>
+    <a className="btn btn-ghost text-xl font-bold text-[#000]" href='/'>Data<span className='text-[#7370FF]'>Stdio</span></a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1 text-[#000] gap-7">
